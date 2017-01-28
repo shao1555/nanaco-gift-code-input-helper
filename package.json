@@ -1,7 +1,7 @@
 {
   "name": "nanaco-gift-code-input-helper",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "description": "nanacoギフトコードの入力を少し楽にします",
   "scripts": {
     "start": "npm run dev:chrome",
