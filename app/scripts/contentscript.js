@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function(){
         document.querySelector('form#registerForm[action="/ap/p/register2.do"]').submit();
       }
     });
+    // 準備ができたら入力欄の背景色を変える
+    document.querySelectorAll('form#registerForm[action="/ap/p/register2.do"] input[size="4"]').forEach(function(input){input.style.backgroundColor = '#e0ffe0'});
     codeInput.focus();
   }
 
