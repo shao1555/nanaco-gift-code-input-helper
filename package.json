@@ -3,6 +3,7 @@
   "private": false,
   "version": "1.0.0",
   "description": "nanacoギフトコードの入力を少し楽にします",
+  "license": "MIT",
   "scripts": {
     "start": "npm run dev:chrome",
     "build": "npm run build:chrome",
