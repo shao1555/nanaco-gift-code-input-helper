@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.querySelector("#gift04").focus();
       }
     });
+    firstInput.focus();
   }
 
 });
