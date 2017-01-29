@@ -2,7 +2,7 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_appShortName__",
   "description": "__MSG_appDescription__",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "manifest_version": 2,
   "default_locale": "en",
   "content_security_policy": "script-src 'self'; object-src 'self'",
@@ -20,7 +20,8 @@
     {
       "matches": [
         "https://nanacogift.jp/ap/p/register1.do?*",
-        "https://nanacogift.jp/ap/p/register3.do?*"
+        "https://nanacogift.jp/ap/p/register3.do?*",
+        "https://nanacogift.jp/ap/p/register5.do?*"
       ],
       "css": [
         "styles/contentscript.css"
