@@ -1,7 +1,7 @@
 {
   "name": "nanaco-gift-code-input-helper",
   "private": false,
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "nanacoギフトコードの入力を少し楽にします",
   "license": "MIT",
   "scripts": {
