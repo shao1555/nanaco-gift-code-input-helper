@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (inputForms.length > 0) {
       // NodeList から Array へのキャスト
       inputForms = Array.apply(null, inputForms);
-      inputForms[0].setAttribute('maxlength', '20');
+      inputForms[0].setAttribute('maxlength', '100');
       inputForms[0].addEventListener('keyup', () => {
         let matches;
         if (matches = /(\w{4})\-?(\w{4})\-?(\w{4})\-?(\w{4})/.exec(inputForms[0].value)) {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       // 準備ができたら入力欄の背景色を変える
       inputForms.forEach( (input) => { input.style.backgroundColor = '#e0ffe0' } );
-      codeInput.focus();
+      inputForms[0].focus();
     }
   }
 
