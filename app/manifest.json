@@ -18,9 +18,6 @@
         "https://nanacogift.jp/ap/p/register3.do?*",
         "https://nanacogift.jp/ap/p/register5.do?*"
       ],
-      "css": [
-        "styles/contentscript.css"
-      ],
       "js": [
         "scripts/contentscript.js"
       ],
