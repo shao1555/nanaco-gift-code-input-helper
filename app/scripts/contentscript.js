@@ -24,7 +24,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 'use strict';
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   // コード入力画面
   const codeEntryForm = document.querySelector('form#registerForm[action="/ap/p/register2.do"]')
   if (codeEntryForm) {
