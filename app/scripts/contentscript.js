@@ -56,8 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // 登録完了画面
   const guideButton = document.querySelector('form#registerForm img[alt="お受取り方法"]');
   if (guideButton) {
-    window.setTimeout( () => {
-      window.close();
-    }, 3000);
+    window.setTimeout( () => { window.close() }, 3000);
   }
 });
