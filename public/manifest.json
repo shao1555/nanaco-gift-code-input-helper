@@ -1,10 +1,9 @@
 {
-  "name": "__MSG_appName__",
-  "short_name": "__MSG_appShortName__",
-  "description": "__MSG_appDescription__",
-  "version": "1.1.1",
+  "name": "nanaco gift code input helper",
+  "short_name": "nanaco-gift-input",
+  "description": "nanacoギフトコードの入力を少し楽にします",
+  "version": "2.0.0",
   "manifest_version": 2,
-  "default_locale": "ja",
   "content_security_policy": "script-src 'self'; object-src 'self'",
   "icons": {
     "16": "images/icon-16.png",
@@ -14,12 +13,12 @@
   "content_scripts": [
     {
       "matches": [
-        "https://nanacogift.jp/ap/p/register1.do?*",
-        "https://nanacogift.jp/ap/p/register3.do?*",
-        "https://nanacogift.jp/ap/p/register5.do?*"
+        "https://nanacogift.jp/ap/p/register1.do*",
+        "https://nanacogift.jp/ap/p/register3.do*",
+        "https://nanacogift.jp/ap/p/register5.do*"
       ],
       "js": [
-        "scripts/contentscript.js"
+        "js/contentscript.js"
       ],
       "run_at": "document_start",
       "all_frames": false

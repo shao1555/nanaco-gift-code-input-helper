@@ -1,7 +1,7 @@
 /*
 MIT License
 
-Copyright (c) 2017 Sho Sawada <shao1555@gmail.com>
+Copyright (C) 2020 Sho Sawada <shao1555@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -23,21 +23,26 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-'use strict';
 document.addEventListener('DOMContentLoaded', () => {
   // コード入力画面
-  const codeEntryForm = document.querySelector('form#registerForm[action="/ap/p/register2.do"]')
+  const codeEntryForm = document.querySelector('form#registerForm[action="/ap/p/register2.do"]') as HTMLFormElement;
   if (codeEntryForm) {
-    let inputForms = codeEntryForm.querySelectorAll('input[size="4"]');
+    let inputForms = Array.from(codeEntryForm.querySelectorAll('input[size="4"]') as NodeListOf<HTMLInputElement>);
     if (inputForms.length > 0) {
       // NodeList から Array へのキャスト
-      inputForms = Array.apply(null, inputForms);
       inputForms[0].setAttribute('maxlength', '100');
       inputForms[0].addEventListener('keyup', () => {
         let matches;
         if (matches = /(\w{4})\-?(\w{4})\-?(\w{4})\-?(\w{4})/.exec(inputForms[0].value)) {
           matches.shift();
-          matches.forEach( (match) => { inputForms.shift().value = match; } );
+          matches.forEach( (match) => {
+            const element = inputForms.shift();
+            if (element) {
+              return element.value = match;
+            } else {
+              return false
+            }
+          } );
           codeEntryForm.submit();
         }
       });
@@ -48,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 登録内容確認画面
-  const confirmationForm = document.querySelector('form#registerForm[action="/ap/p/register4.do"]');
+  const confirmationForm = document.querySelector('form#registerForm[action="/ap/p/register4.do"]') as HTMLFormElement;
   if (confirmationForm) {
     confirmationForm.submit();
   }
